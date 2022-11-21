@@ -1,0 +1,20 @@
+{
+  "itemGroup.spectrum.general.tab.equipment": "Equipamiento",
+  "itemGroup.spectrum.general.tab.consumables": "Consumibles",
+  "itemGroup.spectrum.general.tab.resources": "Recursos",
+  "itemGroup.spectrum.blocks": "Decoracion",
+  "itemGroup.spectrum.blocks.tab.decoration": "Bloques de Construcción",
+  "itemGroup.spectrum.blocks.tab.colored_wood": "Lana de Color",
+  "itemGroup.spectrum.blocks.tab.mob_heads": "Idolos y Cabezas de Mobs",
+  "itemGroup.spectrum.blocks.tab.predefined_items": "Objetos predefinidos",
+
+  "itemGroup.spectrum.general.button.discord": "Únete al Discord",
+  "itemGroup.spectrum.general.button.github": "Codigo Fuente",
+  "itemGroup.spectrum.general.button.curseforge": "Spectrum en CurseForge",
+  "itemGroup.spectrum.general.button.modrinth": "Spectrum en Modrinth",
+  "itemGroup.spectrum.blocks.button.discord": "Únete al Discord",
+  "itemGroup.spectrum.blocks.button.github": "Codigo Fuente",
+  "itemGroup.spectrum.blocks.button.curseforge": "Spectrum en CurseForge",
+  "itemGroup.spectrum.blocks.button.modrinth": "Spectrum en Modrinth",
+		  
+}
