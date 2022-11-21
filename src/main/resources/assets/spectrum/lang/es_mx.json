@@ -16,5 +16,36 @@
   "itemGroup.spectrum.blocks.button.github": "Codigo Fuente",
   "itemGroup.spectrum.blocks.button.curseforge": "Spectrum en CurseForge",
   "itemGroup.spectrum.blocks.button.modrinth": "Spectrum en Modrinth",
-		  
+
+  "spectrum.tooltip.coming_soon": "§4Aun no obtenible en Survival",
+
+  "spectrum.gui.lexicon.reveal_hint_button.text": "Revelar Pista  ",
+  "spectrum.gui.lexicon.reveal_hint_button.tooltip.pay": "Paga para desbloquear una pista",
+  "spectrum.gui.lexicon.reveal_hint_button.tooltip.lacking_resource": "No tienes los recursos suficientes",
+
+  "multiblock.spectrum.pedestal.upgrade_available": "¡Mejora de la estructura disponible!",
+  "multiblock.spectrum.pedestal.simple_structure": "Spectrum Focus",
+  "multiblock.spectrum.pedestal.advanced_structure": "Templo Spectrum",
+  "multiblock.spectrum.pedestal.complex_structure": "Palacio Spectrum",
+  "multiblock.spectrum.fusion_shrine.structure": "Santuario de Fusión",
+  "multiblock.spectrum.enchanter.structure": "Encantador",
+  "multiblock.spectrum.spirit_instiller.structure": "Spirit Instiller",
+  "multiblock.spectrum.cinderhearth.structure": "Cinderhearth",
+
+  "spectrum.ink.color.black": "§8Negro§r",
+  "spectrum.ink.color.red": "§cRojo§r",
+  "spectrum.ink.color.green": "§2Verde§r",
+  "spectrum.ink.color.brown": "§6Cafe§r",
+  "spectrum.ink.color.blue": "§9Azul§r",
+  "spectrum.ink.color.purple": "§5Purple§r",
+  "spectrum.ink.color.cyan": "§bCian§r",
+  "spectrum.ink.color.light_gray": "§7Gris Claro§r",
+  "spectrum.ink.color.gray": "§8Gris§r",
+  "spectrum.ink.color.pink": "§dRosa§r",
+  "spectrum.ink.color.lime": "§aLima§r",
+  "spectrum.ink.color.yellow": "§eAmarillo§r",
+  "spectrum.ink.color.light_blue": "§3Azul Claro§r",
+  "spectrum.ink.color.magenta": "§dMagenta§r",
+  "spectrum.ink.color.orange": "§6Naranja§r",
+  "spectrum.ink.color.white": "§fBlanco§r"
 }
