@@ -46,6 +46,7 @@ public class BloodOrchidBlock extends FlowerBlock implements RevelationAware {
 		builder.add(AGE);
 	}
 	
+	@Override
 	public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		int age = state.get(AGE);
 		if (age < Properties.AGE_5_MAX) {

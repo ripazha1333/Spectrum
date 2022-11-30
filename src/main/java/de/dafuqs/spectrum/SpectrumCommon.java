@@ -247,13 +247,17 @@ public class SpectrumCommon implements ModInitializer {
 		});
 		
 		PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
-			SpectrumAdvancementCriteria.BLOCK_BROKEN.trigger((ServerPlayerEntity) player, state);
+			if(player instanceof ServerPlayerEntity serverPlayerEntity) {
+				SpectrumAdvancementCriteria.BLOCK_BROKEN.trigger(serverPlayerEntity, state);
+			}
 		});
 		
 		ServerLifecycleEvents.SERVER_STARTING.register(server -> {
 			SpectrumCommon.logInfo("Fetching server instance...");
 			SpectrumCommon.minecraftServer = server;
 		});
+		
+		ServerLifecycleEvents.SERVER_STOPPED.register(server -> SpectrumCommon.minecraftServer = null);
 		
 		ServerTickEvents.END_WORLD_TICK.register(world -> {
 			if (world.getTime() % 100 == 0) {
@@ -266,8 +270,7 @@ public class SpectrumCommon implements ModInitializer {
 			}
 		});
 		
-		ServerLifecycleEvents.SERVER_STARTED.register((minecraftServer) -> {
-			SpectrumCommon.minecraftServer = minecraftServer;
+		ServerLifecycleEvents.SERVER_STARTED.register((server) -> {
 			SpectrumCommon.logInfo("Querying fluid luminance...");
 			for (Iterator<Block> it = Registry.BLOCK.stream().iterator(); it.hasNext(); ) {
 				Block block = it.next();
@@ -277,8 +280,8 @@ public class SpectrumCommon implements ModInitializer {
 			}
 			
 			SpectrumCommon.logInfo("Injecting additional recipes...");
-			FirestarterMobBlock.addBlockSmeltingRecipes(minecraftServer.getRecipeManager());
-			injectEnchantmentUpgradeRecipes(minecraftServer);
+			FirestarterMobBlock.addBlockSmeltingRecipes(server.getRecipeManager());
+			injectEnchantmentUpgradeRecipes(server);
 		});
 		
 		EntitySleepEvents.STOP_SLEEPING.register((entity, sleepingPos) -> {
