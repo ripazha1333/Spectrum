@@ -89,10 +89,10 @@ public class TitrationBarrelBlockEntity extends BlockEntity {
 		Fluid bucketFluid = ((BucketItemAccessor) bucketStack.getItem()).fabric_getFluid();
 		if(this.storedFluid == Fluids.EMPTY && bucketFluid != Fluids.EMPTY) {
 			if (!player.isCreative()) {
+				Item remainderItem = bucketStack.getItem().getRecipeRemainder();
 				bucketStack.decrement(1);
 				player.setStackInHand(hand, bucketStack);
 				
-				Item remainderItem = bucketStack.getItem().getRecipeRemainder();
 				if(remainderItem != null) {
 					player.giveItemStack(remainderItem.getDefaultStack());
 				}
@@ -168,6 +168,10 @@ public class TitrationBarrelBlockEntity extends BlockEntity {
 	
 	public int getSealMinecraftDays() {
 		return (int) getSealMilliseconds() / 1000 / 60 / 20;
+	}
+	
+	public String getSealRealDays() {
+		return Support.getWithOneDecimalAfterComma(getSealMilliseconds() / 1000 / 60 / 20 / 72);
 	}
 	
 	private boolean isEmpty(float temperature, int extractedBottles, ITitrationBarrelRecipe recipe) {

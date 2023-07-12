@@ -109,7 +109,6 @@ public class PotionWorkshopBlockEntity extends BlockEntity implements NamedScree
 		boolean shouldMarkDirty = false;
 		
 		PotionWorkshopRecipe calculatedRecipe = calculateRecipe(world, potionWorkshopBlockEntity);
-		potionWorkshopBlockEntity.inventoryChanged = false;
 		if (potionWorkshopBlockEntity.currentRecipe != calculatedRecipe) {
 			potionWorkshopBlockEntity.currentRecipe = calculatedRecipe;
 			potionWorkshopBlockEntity.brewTime = 0;
@@ -119,7 +118,7 @@ public class PotionWorkshopBlockEntity extends BlockEntity implements NamedScree
 			}
 			shouldMarkDirty = true;
 		}
-		
+		potionWorkshopBlockEntity.inventoryChanged = false;
 		
 		if (calculatedRecipe != null) {
 			// if crafting has not started: check if the inventory has enough room to start
